@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>new web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <style>
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+p,h1{text-align: center;}
+    </style>
+</head>
+<body style="background-color: rgb(248, 248, 248);margin-bottom: 20px;">
+    <div style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASsAAACoCAMAAACPKThEAAAA9lBMVEUAAAADAAAAAwAAAAIABAAGAAAAAAQAAgMDAAIAAgQABQUUAAApAAADAAQiAAAEBAQ5AAAeAADDCzjgBQAOAAAwAADlAADLACEYAwkVCAxEERM5DQ0+Dx0yDxlXFRdjFxgpBQtyGzVOEAyKHiFEAAhgEyaBIz0tBAukGySGDRScGD97FzOXFx65Fh9kBgN0CSSyGUZpCiHQFxmVCgyoEDhTAQTKCwZ7CSGsDw3kERRABgdUChe1ETeNEi/BED54Cgm7DQ+bDzSmEhRjCQ7DACyPDhDbEBW6DCrGBiiRBiO7CTVBBAOCES3TBiJuDSdIChq3GSl1ICmgxm1MAAAEkElEQVR4nO3cf1MaRxgH8Gf3dvd+wHlwwNE0Jk2tVm0rFgWViIKI1BiJzft/M30WnY60KbdMxoHmvh9n/EduZv3Oc8/t7q0SAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8S3xvmU+LlxrGOrO/tNCC4tiEoftFfFmSJC84rnWlv6vLSGvfOH5eCJJEUtZf6Rcd1xpK9KvvX5NK4sD9Gg5Jb76pF/FWLL39oRRFzlUihFLvftws6VmNFQffT5IMbf20rZTjJZK/dn7elcUKip4KI4zo9d5+yfmiyi+/lpSkIjZ3IeJQln87aFEUa2O+UC0eR+p5Wssg9ql0+HublFiivX1LYiIT0f7RcUVGgW1b/4wrCDwWkO8r2u50tvkTchUDXQdSxHFE3aOTFsmQC0vRfKOfJSU841H1NO2UFXf3FY105UJhZ6O+1zjrnb2nMIiDYP4O83yesUrp03n/8rSupCxaW3+GOxE/1mJTOu5NBlXpx/F83djopJTli/SyzU9Bpexcv6iEEDpRJqTBJBt2uS/5cz/meaqUG+1+2tlVQSA5WlW4OfsTISU3pDgROlJbJ9nkpkrzCx7DxdS4StOrd5QoFRT4DpxXHmXZ8FqHxtja4pbO30PFPX18eV/k59+XyOrNJJuMGmSMjo2e1ZA876TjPs+qEmT1nJLi+iirTQZ1CnmSYDcVdi/uxuNORcmgoBPQ/yI8oq1hlvXOuhSFJpL1dn88Ti82VEQ8rUKreoYfiaF5P+pl2eR4g6cS21fp+PbuUMvZ1ulsdgF/i3ktrY8ntVpv2Gqc9tM07Z+TH+tEcFRoWM95JkgopNZJrZZN/kjHadp5oMjwzN3uh+Im/DdJ3WGvVmvejftX1VUPZs3JSFZGvdptmn7iBeCqR7PektiPyiec1QdSfv7HC00EItLDWjM95ba+6sGsO6VN/TGrYKn3rEUkRWjr6u4QdZVLCJ9GWTNtE7m+ZS0uzmrvMSvnt/eFxVndcFY7sxUiLPSU1TnqKp8I6Yafg9vIKo+QT1k9IKtckhfJ+5zVLhHm7YvJREhvkDUv67TMaaNiskcYWpyVpgDbMPmMzYqQVR5hG9Y1ZyUIt2AOm5XpzuqqiOeslsJZaZvVHR6DuYyRItqqNfvkYU8mhzG+iD72mh3OCoWVI/CF/5QV6iqH51FYmTSvyB7ng4W8gEzjpHlB9qAoLJRoacrIykkSSLNx1LxHVrkMxUKWDqaHs8PtsIhnDz7WD6afOKtVj2XdGbsM1DYrEthwX8wTAS9uzqZtiaBycTGFNJru2HMfiGsx7XFFjabnCkeucs2a1PH0AeeJcnmzBfPNdHPVA/kf4KwksnLzmNU+snLwuBEzmO4W9i8F3T1u8CErF8hqWYPbqsRJNTetgxLWOI5af5Z4gYO0XHT37N/qIisXHz/Y7zHCclCZZYUXOS4aF3aXAU9CF4178oXBGUgX5c/kCQ/v6F1sfKYQzcqNzQr7om6qb5GVK2TlrvRGICpH9WrB/tfjV9AaZQUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPCV/gL4CU3Wy0VoFAAAAABJRU5ErkJggg==');">
+
+        <div class="row">
+            <div class="column" style="margin-right: 450px;">
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">
+                        <img src="https://wallpaperaccess.com/full/1686205.jpg" alt="" width="40" height="34" class="d-inline-block align-text-top" style="border-radius: 200px;">
+                        TECH
+                      </a>
+                    </div>
+                    </nav>
+            
+            </div>
+            <div class="column">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid" style="color:brown">
+                      <a class="navbar-brand" href="#" style="color: blue;">home</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                          <a class="nav-link active" aria-current="page" href="file:///C:/Users/STUDENT/Documents/new.html" style="color: rgb(17, 0, 255);">about</a>
+                          <a class="nav-link" href="#" style="color: blue;">testimonial</a>
+                          <a class="nav-link" href="#" style="color: blue;">contact</a>
+                          <a class="nav-link disabled">goback</a>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+          </div> 
+          <!--slide bar-->
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="padding-bottom: 55px;">
+            <div class="carousel-inner">
+              <div class="carousel-item active" height="300px" width="70px">
+                <img src="https://images.pexels.com/photos/585752/pexels-photo-585752.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="d-block w-100" alt="..."  height="450px">
+              </div>
+              <div class="carousel-item">
+                <img src="https://wallpaperaccess.com/full/451965.jpg" class="d-block w-100" alt="..."  height="450px">
+              </div>
+              <div class="carousel-item">
+                <img src="https://media.istockphoto.com/photos/businessman-trading-online-stock-market-on-teblet-screen-digital-picture-id1311598658?b=1&k=20&m=1311598658&s=170667a&w=0&h=Ln_dpeXRkCDCZjuqOe2r7AlWP29xHFbc9wyKzxajloA=" class="d-block w-100" alt="..."  height="450px">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+     <!--content-->
+     <div class="row" style="background-color: rgb(224, 7, 7);margin-bottom: 20px;">
+        <div class="column" style="background-color:#aaa;margin-right: 400px;">
+         <img src="https://www.popsci.com/uploads/2019/01/07/WWJUGFOLUNOXV6UW6TOJWMSZWE.jpg?auto=webp" height="300px">
+        </div>
+        <div class="column" style="background-color:#bbb;">
+          <h2>About computer</h2>
+          <p>The two main types of software are system software and application software. System software controls a computer’s internal functioning, chiefly through an operating system, and also controls such peripherals as monitors, printers, and storage devices. Application software, by contrast, directs the computer to execute commands given by the user and may be said to include any program that processes data for a user. Application software thus includes word processors, spreadsheets, database management, </p>
+        </div>
+      </div>
+
+
+  
+    <div class="row" style="margin-top:3%">
+        <div class="column">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRefd3-EyLFUsbWqN2kA779iXhfFHZY8muqsw&usqp=CAU" alt="img" height="200px" style="margin-left: 44px;">  <h1 style="color: rgb(6, 252, 190);">Spyware</h1><p style="color: rgb(224, 26, 208);">A modern way of creating two columns, is to use CSS Flexbox. However, it is not supported in Internet Explorer 10 and earlier versions.</p>
+        </div>
+        <div class="column">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEFBAx2e4qwd86As1JTqrQp-XN0hiqHk42nQ&usqp=CAU" alt="use" height="200px"width="400px"><h1 style="color: rgb(6, 252, 190);">The computer</h1>  <p style="color: rgb(255, 13, 182);">  A modern way of creating two columns, is to use CSS Flexbox. However, it is not supported in Internet Explorer 10 and earlier versions.</p>
+        </div>
+        <div class="column">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl1KUt_8bTJXPD3PcWh0aW9-ASmWM8yncQoA&usqp=CAU" alt="hgbdhf" height="200px"width="400px"> <h1 style="color: rgb(6, 252, 190);">About AI</h1>  <p style="color: rgb(255, 0, 255);">  A modern way of creating two columns, is to use CSS Flexbox. However, it is not supported in Internet Explorer 10 and earlier versions.</p>
+        </div>
+      </div> 
+      <!--content-->
+      <div class="row" style="margin-top: 100px;color: blue;">
+        <div class="column" style="margin-right: 300px;margin-left: 100px;">
+            
+            
+            <input type="form" name="roll" id="" placeholder="form"><br>
+        
+    
+            <input type="name" name="roll" id="" placeholder="enter name"><br>
+            <input type="email" name="roll" id="" placeholder="email"> <br>
+      <input type="number" name="roll" id="" placeholder="mobile number"><br>
+        
+        </div>
+        <div class="column">
+            <p>BALASORE Pin Code - 756001, All Post Office Areas PIN <br>BALASORE Pin Code is 756001. BALASORE is located in BALESWAR, ODISHA, India. What is the contact address for BALASORE Post Office, ODISHA? BALASORE Post .</p>
+        </div>
+      </div> 
+
+
+      <footer class="container" style="margin-top: 200px;">
+        <p class="float-end">
+          <a href="file:///C:/Users/STUDENT/Documents/task.html">back to top</a>
+        </p>
+        <p style="color: darkmagenta;"> © 2017–2021 Company, Inc. ·
+          <a href="#">privacy</a>
+          .
+          <a href="#">Terms</a>
+        </p>
+      </footer>
+    
+    </div>
+</body>
+</html>
